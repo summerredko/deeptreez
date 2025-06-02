@@ -37,20 +37,41 @@
     }
 
     /* Body Styles */
-    body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-family: Arial, sans-serif;
-        background-image: url('images/background9.png');
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        color: white;
-        text-align: center;
-        padding: 20px;
-    }
+    html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative; /* This is important */
+  padding-top: 50px; 
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-image: url('images/bg10.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 
     /* Layout Containers */
     .title,
@@ -65,7 +86,7 @@
 
     .title {
         max-width: 450px;
-        margin-top: 50px;
+        margin-top: 10px;
     }
 
     .logo {
@@ -206,12 +227,12 @@
         glimpses of
         off-beat skanking, all seen through a soft-focus lens.<br /><br />
         Deep Trees is the curated musical project of songwriter and multi-instrumentalist Summer Redko, who got her
-        start in top-tier recording studios supporting major and independent labels, with a growing collection of film
+        start as a sound engineer in recording studios supporting major and independent labels, with a growing collection of film
         and
         TV credits quietly building behind the scenes. There’s a cosmic yearning in her work, and a refusal to ever call
         a track
         “done.”<br /><br />
-        Her debut EP, <i>Smoking in Airports</i>, is a delicate balance of digital and human. Collaborating with go-to
+        Her debut EP, <i>Smoking in Airports</i>, is a delicate balance of digital and human. Collaborating with standout
         musicians like drummer Nik Hughes (Bush, Andy Grammer, Puddle of Mudd), bassist Luca Giachi
         (Sony/BMG, Universal), and horn player Victor Mejia (when the stars—and budgets—align), the music traces
         heartbreak,
