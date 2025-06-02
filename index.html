@@ -44,13 +44,13 @@
 }
 
 body {
-  /* ...other styles... */
   background-image: url('images/mobile-bg2.png');
   background-repeat: no-repeat;
-  background-size: cover;      /* or 'contain' if you want the whole image always visible */
-  background-position: center top; /* or just 'center' */
-  background-attachment: fixed;   /* for mobile compatibility */
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
   padding-top: 50px;
+  background-color: #302c37; /* fallback for desktop if image fails */
 }
 
 /* body::before {
@@ -167,11 +167,12 @@ body {
 
     @media (max-width: 600px) {
   body {
+    background-image: none;      /* <--- This removes the image on mobile */
     background-color: #302c37;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
-    background-attachment: scroll; /* better for mobile */
+    background-attachment: scroll;
   }
 }
     @media (max-width: 600px) {
