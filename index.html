@@ -44,33 +44,29 @@
 }
 
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: white;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  overflow-x: hidden;
-  position: relative; /* This is important */
-  padding-top: 50px; 
+  /* ...other styles... */
+  background-image: url('images/mobile-bg2.png');
+  background-repeat: no-repeat;
+  background-size: cover;      /* or 'contain' if you want the whole image always visible */
+  background-position: center top; /* or just 'center' */
+  background-attachment: fixed;   /* for mobile compatibility */
+  padding-top: 50px;
 }
 
-body::before {
+/* body::before {
   content: "";
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  background-image: url('images/bg10.png');
+  right: 0;
+  bottom: 0;
+  background-image: url('images/mobile-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-}
+  z-index: -1;
+} */
+
 
 
     /* Layout Containers */
@@ -82,12 +78,15 @@ body::before {
         width: 100%;
         max-width: 475px;
         box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .title {
-        max-width: 450px;
-        margin-top: 50px;
-    }
+    display: block;
+    max-width: 450px;
+    margin: 50px auto 0 auto; /* top, right, bottom, left */
+}
 
     .logo {
         max-width: 425px;
@@ -100,9 +99,10 @@ body::before {
     }
 
     .description {
+        color: #fff;
         margin-top: 20px;
         padding: 20px;
-        font-size: 16px;
+        font-size: 18px;
         line-height: 1.6;
         position: relative;
         text-align: left;
